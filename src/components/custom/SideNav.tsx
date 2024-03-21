@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { Button, buttonVariants } from '../ui/button'
+import { Paintbrush2 } from 'lucide-react'
 
 interface SideNavProps {
   
@@ -14,11 +16,11 @@ const SideNav: FC<SideNavProps> = ({}) => {
     
   return (
     <div
-    className='bg-card h-screen min-w-[250px] p-5 border-r border-border'
+    className='h-screen min-w-[250px] p-5 border-r border-border'
     >
         <Link
         href="/"
-        className='hover:text-primary transition-colors p-4 inline-block'
+        className='hover:text-primary transition-colors  inline-block'
         >
             <h1
             className='text-2xl font-bold'
@@ -27,7 +29,7 @@ const SideNav: FC<SideNavProps> = ({}) => {
             </h1>
         </Link>
         <ul
-        className='mt-5 flex flex-col gap-2'
+        className='mt-5 flex flex-col'
         >
             {NavLinks.map(link => (
                 <li
@@ -35,11 +37,18 @@ const SideNav: FC<SideNavProps> = ({}) => {
                 >
                     <Link
                     href={link.href}
-                    className={cn('py-2 px-4 hover:bg-primary inline-block hover:text-background rounded-sm hover:font-bold w-full transition-colors font-semibold', 
+                    className={cn('py-2 rounded-sm w-full font-semibold flex items-center gap-2 opacity-65 hover:opacity-100 transition-all', 
                     {
-                        "bg-primary text-background font-bold": isLink(link.href, pathname)
-                    })}
+                        "opacity-100": isLink(link.href, pathname)
+                    }
+                    )}
                     >
+                        <div
+                        className={cn(buttonVariants({ size: "icon", variant: isLink(link.href, pathname) ? "default" : "secondary"}), " h-10 w-10 ")}
+                        >
+                            <link.icon />
+                        </div>
+
                         {link.title}
                     </Link>
                 </li>

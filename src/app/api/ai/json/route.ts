@@ -22,7 +22,7 @@ export const POST = async (req: Request, res: Response) => {
                 `
             }
         ],
-        model: "mistral-ins-7b-q4",
+        model: "open-orca_mistral-7b-openorca",
         temperature: 0.7,
         response_format: {
             type: "json_object"

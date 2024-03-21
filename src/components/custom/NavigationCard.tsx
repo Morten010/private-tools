@@ -17,7 +17,7 @@ const NavigationCard: FC<NavigationCardProps> = ({description, href, image, titl
 
   return (
     <Link
-    className='max-w-[300px]'
+    className='max-w-[250px]'
     href={href}
     >
       <Card
