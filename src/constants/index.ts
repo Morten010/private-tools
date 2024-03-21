@@ -43,7 +43,7 @@ export const ImageNavLinks: NavigationCardProps[] = [
             src: "/convert.webp",
             alt: "Convert image to webp"
         },
-        title: "Image conversion",
+        title: "Convert image to webp",
         description: "Convert image types from one to another",
         href: "/images/convert"
     }
@@ -58,7 +58,19 @@ export const aiNavLinks: NavigationCardProps[] = [
         title: "Ai generate json",
         description: "Generate json easily with json, some dummy json or something else.",
         href: "/ai/json"
-    },
-    
+    },  
 ] 
+
+export const colorsNavLinks: NavigationCardProps[] = [
+    {
+        image: {
+            src: "/colorconvert.webp",
+            alt: "Ai to json"
+        },
+        title: "Convert a color",
+        description: "Convert one color type to another.",
+        href: "/colors/convert"
+    },
+] 
+
 

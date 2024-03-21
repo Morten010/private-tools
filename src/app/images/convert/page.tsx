@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input'
 import Link from 'next/link'
 import { ChangeEvent, Dispatch, FC, SetStateAction, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { toast } from 'sonner'
 
 interface pageProps {
   
@@ -43,11 +44,16 @@ const ConverPage: FC<pageProps> = ({}) => {
         setIsLoading(false)
     }
 
-    const handleConvert = () => {
-        console.log("Converting...");
-        files?.map(file => {
+    const handleConvert = async () => {
+        if(!files) return toast.error("No files to convert")
+        setIsLoading(true)
+        for(const file of files){
             convertImage(file, setFiles)
+        }
+        toast.success("Successfully converted images to webp", {
+            className: "bg-card text-foreground border-border"
         })
+        setIsLoading(false)
     }
 
     const handleDownloads = () => {
