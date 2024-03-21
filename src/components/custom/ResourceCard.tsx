@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { ResourceProps} from "../../constants/resources"
 import Image from 'next/image'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip'
 
 interface ResourceCardProps {
   resource: ResourceProps
@@ -10,7 +11,8 @@ interface ResourceCardProps {
 const ResourceCard: FC<ResourceCardProps> = ({ resource }) => {
   return (
     <Link
-    href={`/resource/slug`}
+    href={resource.link}
+    target='_blank'
     className='hover:scale-[102%] transition-transform'
     >
         <div
@@ -49,16 +51,34 @@ const ResourceCard: FC<ResourceCardProps> = ({ resource }) => {
             </div>
             </div>
             <div
-            className="p-4"
+            className="p-4 z-50"
             >
-            <h2
-            className="text-2xl font-semibold capitalize"
-            >
-                {resource.name}
-            </h2>
-            <p>
-                {resource.description.slice(0, 100)}...
-            </p>
+                <h2
+                className="text-2xl font-semibold capitalize"
+                >
+                    {resource.name}
+                </h2>
+                <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger
+                        className='text-start'
+                        
+                        >
+                            <p>
+                                {resource.description.slice(0, 100)}...
+                            </p>
+                        </TooltipTrigger>
+                        <TooltipContent
+                        className='max-w-[200px] '
+                        >
+                            <p
+                            className='z-[200]'
+                            >
+                                {resource.description}
+                            </p>
+                        </TooltipContent>
+                    </Tooltip>
+                </TooltipProvider>
             </div>
         </div>
     </Link>

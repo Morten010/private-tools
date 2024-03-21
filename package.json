@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tooltip": "^1.0.7",
     "@uiw/react-textarea-code-editor": "^3.0.2",
     "ai": "^3.0.13",
     "axios": "^1.6.8",
@@ -25,8 +26,10 @@
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",
     "react-resizable-panels": "^2.0.13",
+    "sonner": "^1.4.41",
     "tailwind-merge": "^2.2.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/node": "^20",
