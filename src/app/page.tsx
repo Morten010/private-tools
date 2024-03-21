@@ -1,6 +1,7 @@
 import { ResourceProps, resources } from "../constants/resources"
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type CategoriesProps = ResourceProps["category"]
 
@@ -62,25 +63,51 @@ export default function Home({
           </ul>
         </div>
         <div
-        className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] mt-5 gap-2"
+        className="flex flex-wrap mt-5 gap-4"
         >
+          {!data.length && (
+            <div
+            className="w-full h-[30vh] grid place-content-center"
+            >
+              <p>
+                No resources found here
+              </p>
+            </div>
+          )}
           {data.map(resource => (
             <div
             key={resource.name + "-resource-link"}
-            className="bg-card rounded-sm overflow-hidden"
+            className="bg-card rounded-sm overflow-hidden w-full min-w-[250px]  max-w-[300px] border"
             >
               <div
-              className="aspect-video"
+              className="aspect-video relative"
               >
                 <div
-                className="relative w-20"
+                className="w-full h-[80%] relative"
                 >
-                  <img
+                  <Image
                   src={resource.logo} 
-                  alt={`${resource.name} logo`} 
-                  height={150}
-                  width={150}
+                  alt={`${resource.name} logo backdrop`} 
+                  width={200}
+                  height={200}
+                  className="-top-[calc(50%+30px)] left-2/4 -translate-x-2/4 absolute !z-0"
                   />
+                  <div 
+                  className=" w-full h-full z-20 backdrop-blur-md relative"
+                  />
+                </div>
+                <div
+                className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-20 aspect-square bg-background rounded-full p-2 border z-30"
+                >
+                  <div
+                  className="relative w-full h-full overflow-hidden rounded-full"
+                  >
+                    <Image
+                    src={resource.logo} 
+                    alt={`${resource.name} logo`} 
+                    fill
+                    />
+                  </div>
                 </div>
               </div>
               <div
