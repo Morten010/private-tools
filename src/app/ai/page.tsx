@@ -9,7 +9,7 @@ interface pageProps {
 const page: FC<pageProps> = ({}) => {
   return (
     <div>
-      {process.env.AI ? (
+      {process.env.NEXT_PUBLIC_AI ? (
         <>
         {aiNavLinks.map(link => (
           <NavigationCard 

@@ -31,28 +31,36 @@ const SideNav: FC<SideNavProps> = ({}) => {
         <ul
         className='mt-5 flex flex-col'
         >
-            {NavLinks.map(link => (
-                <li
-                key={link.href + "sidenav"}
-                >
-                    <Link
-                    href={link.href}
-                    className={cn('py-2 rounded-sm w-full font-semibold flex items-center gap-2 opacity-65 hover:opacity-100 transition-all', 
-                    {
-                        "opacity-100": isLink(link.href, pathname)
+            {NavLinks.map(link => {
+                if(!process.env.NEXT_PUBLIC_AI?.length) {
+                    if(link.href === "/ai"){
+                        console.log(link.href);
+                        return null
                     }
-                    )}
+                }
+                return (
+                    <li
+                    key={link.href + "sidenav"}
                     >
-                        <div
-                        className={cn(buttonVariants({ size: "icon", variant: isLink(link.href, pathname) ? "default" : "secondary"}), " h-10 w-10 ")}
+                        <Link
+                        href={link.href}
+                        className={cn('py-2 rounded-sm w-full font-semibold flex items-center gap-2 opacity-65 hover:opacity-100 transition-all', 
+                        {
+                            "opacity-100": isLink(link.href, pathname)
+                        }
+                        )}
                         >
-                            <link.icon />
-                        </div>
-
-                        {link.title}
-                    </Link>
-                </li>
-            ))}
+                            <div
+                            className={cn(buttonVariants({ size: "icon", variant: isLink(link.href, pathname) ? "default" : "secondary"}), " h-10 w-10 ")}
+                            >
+                                <link.icon />
+                            </div>
+    
+                            {link.title}
+                        </Link>
+                    </li>
+                )
+            })}
         </ul>
     </div>
   )
