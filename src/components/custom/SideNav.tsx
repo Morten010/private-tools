@@ -59,7 +59,14 @@ const SideNav: FC<SideNavProps> = ({}) => {
 }
 
 function isLink(href: string, currentLink: string){
-    
+    if(href === "/") {
+        if(currentLink !== "/"){
+            return false
+        }
+        if(currentLink === "/"){
+            return true
+        }
+    }
     
     return currentLink.includes(href)
 }

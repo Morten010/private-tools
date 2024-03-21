@@ -1,11 +1,16 @@
 import { NavigationCardProps } from "@/components/custom/NavigationCard"
-import { BrainCircuit, ImageUp, Paintbrush2 } from "lucide-react"
+import { BrainCircuit, Folder, ImageUp, Paintbrush2 } from "lucide-react"
 
 export const NavLinks: {
     title: string,
     href: string,
     icon: any
 }[] = [
+    {
+        title: "Resources",
+        href: "/",
+        icon: Folder
+    },
     {
         title: "Image tools",
         href: "/images",

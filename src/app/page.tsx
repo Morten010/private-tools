@@ -2,6 +2,7 @@ import { ResourceProps, resources } from "../constants/resources"
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Search from "@/components/custom/Search";
 
 type CategoriesProps = ResourceProps["category"]
 
@@ -25,6 +26,12 @@ export default function Home({
   
   return (
     <main>
+      {/* search */}
+      <div>
+        <Search />
+      </div>
+      {/* search */}
+
       <div
       className="min-h-screen w-full relative"
       >
@@ -37,7 +44,7 @@ export default function Home({
           <h1
           className="text-8xl font-semibold text-center pt-40"
           >
-            Tools
+            Resources
           </h1>
         </div>
         <div
@@ -97,7 +104,7 @@ export default function Home({
                   />
                 </div>
                 <div
-                className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-20 aspect-square bg-background rounded-full p-2 border z-30"
+                className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-24 aspect-square bg-background rounded-full p-2 border z-30"
                 >
                   <div
                   className="relative w-full h-full overflow-hidden rounded-full"

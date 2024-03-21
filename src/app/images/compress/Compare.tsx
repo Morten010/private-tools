@@ -16,7 +16,7 @@ const Compare: FC<CompareProps> = ({
     className='relative w-full aspect-square my-5 rounded-sm overflow-hidden'
     >
       <div 
-      className='bg-red-500 h-full aspect-square -z-10 absolute'
+      className='bg-primary h-full aspect-square -z-10 absolute'
       >
         <Image 
         src={lastImage}
