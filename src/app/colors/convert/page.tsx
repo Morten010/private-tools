@@ -9,9 +9,9 @@ interface pageProps {
 
 const ColorPage: FC<pageProps> = ({}) => {
     const [colors, setColors] = useState({
-        hex: "#122229",
-        rgb: "rgb(17,34,34)",
-        hsl: "hsl(180,33%,34%)"
+        hex: "#D6FF42",
+        rgb: "rgb(214,255,66)",
+        hsl: "hsl(73,100%,66%)"
     })
     
     const handleChange = (c: {
@@ -84,10 +84,12 @@ const ColorPage: FC<pageProps> = ({}) => {
             Convert color
         </h2>
         <div
-        className='max-w-[600px]'
+        className='max-w-[600px] flex flex-col gap-4 mt-5'
         >
             <label>
-                <span>
+                <span
+                className='pb-2 inline-block'
+                >
                     HEX
                 </span>
                 <Input 
@@ -96,7 +98,9 @@ const ColorPage: FC<pageProps> = ({}) => {
                 />
             </label>
             <label>
-                <span>
+                <span
+                className='pb-2 inline-block'
+                >
                     RGB
                 </span>
                 <Input 
@@ -105,7 +109,9 @@ const ColorPage: FC<pageProps> = ({}) => {
                 />
             </label>
             <label>
-                <span>
+                <span
+                className='pb-2 inline-block'
+                >
                     HSL
                 </span>
                 <Input 
