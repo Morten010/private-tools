@@ -46,6 +46,15 @@ export const ImageNavLinks: NavigationCardProps[] = [
         title: "Convert image to webp",
         description: "Convert image types from one to another",
         href: "/images/convert"
+    },
+    {
+        image: {
+            src: "/logos/removebg.webp",
+            alt: "background removal"
+        },
+        title: "Remove Background",
+        description: "Remove background of an image",
+        href: "/images/removebg"
     }
 ] 
 

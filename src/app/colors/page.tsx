@@ -14,7 +14,9 @@ const page: FC<pageProps> = ({}) => {
       >
         Color tools
       </h2>
-      <div>
+      <div
+      className='flex gap-4 flex-wrap'
+      >
         {colorsNavLinks.map(link => (
           <NavigationCard
           {...link}

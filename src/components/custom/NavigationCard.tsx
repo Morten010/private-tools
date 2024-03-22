@@ -21,7 +21,7 @@ const NavigationCard: FC<NavigationCardProps> = ({description, href, image, titl
     href={href}
     >
       <Card
-      className='overflow-hidden max-w-[300px]'
+      className='overflow-hidden max-w-[300px] h-full'
       >
         <div
         className='relative w-full aspect-square'
