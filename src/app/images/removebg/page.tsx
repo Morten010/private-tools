@@ -30,7 +30,7 @@ const RemoveBgPage: FC<pageProps> = ({}) => {
         imglyRemoveBackground(e.currentTarget.files[0], {
             output: {
                 format: "image/webp",
-                quality: 0.8
+                quality: 1
             }
         }).then(blob => {
             // const url = URL.createObjectURL(blob)

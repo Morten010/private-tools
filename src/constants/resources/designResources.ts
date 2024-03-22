@@ -36,4 +36,11 @@ export const designResources:  ResourceProps[] = [
         category: "Design",
         link: "https://mobbin.com/"
     },
+    {
+        logo: "/logos/fffuel.webp",
+        name: "fffuel",
+        description: "fffuel is a collection of color tools and free SVG generators for gradients, patterns, textures, shapes & backgrounds",
+        category: "Design",
+        link: "https://fffuel.co/"
+    },
 ]
