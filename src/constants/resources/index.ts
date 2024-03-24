@@ -1,4 +1,5 @@
 import { designResources } from "./designResources"
+import { developmentResources } from "./development"
 import { TechnologiesResources } from "./technologiesResouces"
 import { ToolsResources } from "./toolsResources"
 import { typographyResources } from "./typographyResouces"
@@ -20,5 +21,6 @@ export const resources: ResourceProps[] = [
     ...ToolsResources,
     ...typographyResources,
     ...UpskillingResources,
-    ...youtubeResources
+    ...youtubeResources,
+    ...developmentResources
 ]
