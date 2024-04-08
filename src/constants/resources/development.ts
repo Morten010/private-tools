@@ -168,5 +168,19 @@ export const developmentResources:  ResourceProps[] = [
         description: "Clerk is a modern authentication and user management platform for web applications. It provides features such as passwordless authentication, customizable user profiles, and role-based access control.",
         category: "Development",
         link: "https://clerk.dev/"
-    }
+    },
+    {
+        logo: "/logos/notmade.svg",
+        name: "Coolify",
+        description: "Self-hosting with superpowers. An open-source & self-hostable Heroku / Netlify / Vercel alternative.",
+        category: "Development",
+        link: "https://coolify.io/self-hosted"
+    },
+    {
+        logo: "/logos/notmade.svg",
+        name: "Medusajs",
+        description: "Thousands of developers use Medusa’s open-source commerce modules and tools to build rich, reliable, and performant commerce applications without reinventing core commerce logic.",
+        category: "Development",
+        link: "https://medusajs.com/"
+    },
 ]
