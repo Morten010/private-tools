@@ -16,6 +16,13 @@ export const developmentResources:  ResourceProps[] = [
         link: "https://vercel.com/"
     },
     {
+        logo: "/logos/notmade.svg",
+        name: "Remotion",
+        description: "Create videos like spotify wrapped with React.",
+        category: "Development",
+        link: "https://www.remotion.dev/docs/the-fundamentals"
+    },
+    {
         logo: "/logos/netlify.webp",
         name: "Netlify",
         description: "Netlify is a platform that provides hosting and serverless backend services for web applications. It offers features such as continuous deployment, serverless functions, and form handling.",
