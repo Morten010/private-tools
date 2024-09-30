@@ -76,7 +76,7 @@ const ConverPage: FC<pageProps> = ({}) => {
             <h2
             className='text-2xl font-semibold'
             >
-                Convert to webp
+                Remove background
             </h2>
             <Input 
             type='file'

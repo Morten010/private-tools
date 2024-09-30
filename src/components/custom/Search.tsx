@@ -29,7 +29,7 @@ const Search: FC<SearchProps> = ({}) => {
         type='text'
         className='z-50'
         value={search}
-        placeholder='Søg på google'
+        placeholder='Search on google'
         onChange={(e) => setSearch(e.currentTarget.value)}
         />
         <Button

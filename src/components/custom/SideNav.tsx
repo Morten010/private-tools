@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Button, buttonVariants } from '../ui/button'
 import { Paintbrush2 } from 'lucide-react'
+import { ResizablePanel } from '../ui/resizable'
 
 interface SideNavProps {
   
@@ -15,7 +16,7 @@ const SideNav: FC<SideNavProps> = ({}) => {
     const pathname = usePathname();
     
   return (
-    <div
+    <ResizablePanel
     className='h-screen min-w-[250px] p-5 border-r border-border'
     >
         <Link
@@ -62,7 +63,7 @@ const SideNav: FC<SideNavProps> = ({}) => {
                 )
             })}
         </ul>
-    </div>
+    </ResizablePanel>
   )
 }
 
