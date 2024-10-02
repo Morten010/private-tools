@@ -4,7 +4,6 @@ import "./globals.css";
 import { Providers } from "@/components/Providers";
 import SideNav from "@/components/custom/SideNav";
 import { Toaster } from "sonner";
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,18 +21,16 @@ export default function RootLayout({
     <html lang="en" data-color-mode="dark">
       <body className={inter.className}>
         <Providers>
-          <ResizablePanelGroup
-          direction="horizontal"
+          <div
           className="flex"
           >
             <SideNav />
-            <ResizableHandle />
-            <ResizablePanel
+            <div
             className="flex-grow max-h-screen  overflow-auto p-5"
             >
               {children}
-            </ResizablePanel>
-          </ResizablePanelGroup>
+            </div>
+          </div>
           <Toaster />
         </Providers>
       </body>
