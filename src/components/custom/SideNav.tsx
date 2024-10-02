@@ -16,7 +16,7 @@ const SideNav: FC<SideNavProps> = ({}) => {
     const pathname = usePathname();
     
   return (
-    <ResizablePanel
+    <div
     className='h-screen min-w-[250px] p-5 border-r border-border'
     >
         <Link
@@ -63,7 +63,7 @@ const SideNav: FC<SideNavProps> = ({}) => {
                 )
             })}
         </ul>
-    </ResizablePanel>
+    </div>
   )
 }
 
